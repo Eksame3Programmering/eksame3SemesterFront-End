@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Room</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="../index.html">Hotel App</a>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <a class="nav-link" href="hotelsList.html">Hotel List</a>
+        </ul>
+
+        <ul class="navbar-nav">
+            <a class="nav-link" href="editHotels.html">Edit Hotel</a>
+        </ul>
+
+        <ul class="navbar-nav">
+            <a class="nav-link" href="searchHotelByID.html">Search Hotels by ID</a>
+        </ul>
+
+        <ul class="navbar-nav">
+            <a class="nav-link" href="createRoom.html">Create Room</a>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h1>Create Room</h1>
+
+    <div class="form-group">
+        <label for="roomNumber">Room Number:</label>
+        <input class="form-control" id="roomNumber" required type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="numberOfBeds">Number of Beds:</label>
+        <input class="form-control" id="numberOfBeds" required type="number">
+    </div>
+
+    <div class="form-group">
+        <label for="hotelId">Select Hotel:</label>
+        <select class="form-control" id="hotelId" required>
+            <!-- Hotel options will be populated dynamically -->
+        </select>
+    </div>
+
+    <button class="btn btn-primary" id="createRoomBtn">Create Room</button>
+</div>
+
+<!-- Bootstrap JS and Popper.js (required for Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Your custom JavaScript file (replace with your actual file path) -->
+<script src="../js/createRoom.js"></script>
+
+</body>
+</html>

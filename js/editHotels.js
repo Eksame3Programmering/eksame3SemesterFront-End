@@ -1,4 +1,8 @@
 // Fetch hotels and update the table
+
+function openUpdatePage(hotelId) {
+    window.location.href = `updateHotel.html?id=${hotelId}`;
+}
 function fetchAndRenderHotels() {
     fetch('http://localhost:8080/hotels')
         .then(response => response.json())
@@ -16,7 +20,10 @@ function fetchAndRenderHotels() {
           <td>${hotel.zip}</td>
           <td>${hotel.country}</td>
           <td>${hotel.rooms}</td>
-          <td><button class="btn btn-danger" onclick="deleteHotel(${hotel.id})">Delete</button></td> <!-- Add this line for the delete button -->
+          <td>
+          <button class="btn btn-danger" onclick="deleteHotel(${hotel.id})">Delete</button> <!-- Add this line for the delete button -->
+          <button class="btn btn-primary" onclick="openUpdatePage(${hotel.id})">Edit</button>
+          </td>
         `;
                 hotelTableBody.appendChild(row);
             });
@@ -43,6 +50,11 @@ function deleteHotel(hotelId) {
             console.error('Error deleting hotel:', error);
         });
 }
+
+// Rest of the script (create hotel form and event listeners)
+
+// Fetch and render hotels when the page loads
+document.addEventListener('DOMContentLoaded', fetchAndRenderHotels);
 
 document.getElementById('createHotelBtn').addEventListener('click', function () {
     const hotelName = document.getElementById('hotelName').value;

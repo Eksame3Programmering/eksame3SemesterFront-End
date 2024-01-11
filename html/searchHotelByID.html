@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Hotels by ID</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="../index.html">Hotel App</a>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <a class="nav-link" href="hotelsList.html">Hotel List</a>
+        </ul>
+
+        <ul class="navbar-nav">
+            <a class="nav-link" href="editHotels.html">Edit Hotel</a>
+        </ul>
+
+        <ul class="navbar-nav">
+            <a class="nav-link" href="searchHotelByID.html">Search Hotels by ID</a>
+        </ul>
+
+        <ul class="navbar-nav">
+            <a class="nav-link" href="createRoom.html">Create Room</a>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h1>Search Hotels by ID</h1>
+
+    <div class="form-group">
+        <label for="hotelId">Enter Hotel ID:</label>
+        <input class="form-control" id="hotelId" required type="number">
+    </div>
+
+    <button class="btn btn-primary" id="searchHotelBtn">Search</button>
+
+    <div class="mt-3" id="hotelDetails">
+        <!-- Hotel details will be displayed here -->
+    </div>
+</div>
+
+<script src="../js/searchHotelsById.js"></script>
+</body>
+</html>
