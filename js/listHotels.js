@@ -17,6 +17,7 @@ fetch('http://localhost:8080/hotels') // Replace with your actual backend URL
             <td>${hotel.city}</td>
             <td>${hotel.zip}</td>
             <td>${hotel.country}</td>
+            <td>${hotel.rooms}</td>
           `;
             hotelTableBody.appendChild(row);
         });

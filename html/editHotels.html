@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Create and View Hotels</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="../index.html">Hotel App</a>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <a class="nav-link" href="hotels.html">Hotel List</a>
+        </ul>
+
+        <ul class="navbar-nav">
+            <a class="nav-link" href="editHotels.html">edit hotel</a>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h1>Hotels List</h1>
+
+    <div class="form-group">
+        <label for="hotelName">Hotel Name:</label>
+        <input class="form-control" id="hotelName" required type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="street">Hotel Street:</label>
+        <input class="form-control" id="street" required type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="city">City:</label>
+        <input class="form-control" id="city" required type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="zip">ZIP Code:</label>
+        <input class="form-control" id="zip" required type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="country">Country:</label>
+        <input class="form-control" id="country" required type="text">
+    </div>
+
+    <button class="btn btn-primary" id="createHotelBtn">Create Hotel</button>
+
+
+    <!-- Button to trigger the modal -->
+
+
+    <!-- Table to display the list of hotels -->
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Street</th>
+            <th>City</th>
+            <th>ZIP</th>
+            <th>Country</th>
+            <th>Room Count</th>
+            <th>Action</th> <!-- Add this line for the delete button column -->
+        </tr>
+        </thead>
+        <tbody id="hotelTableBody">
+        <!-- Hotels will be displayed here -->
+        </tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Your custom JavaScript file (replace with your actual file path) -->
+<script src="../js/listHotels.js"></script>
+<script src="../js/editHotels.js"></script>
+
+</body>
+</html>
