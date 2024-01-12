@@ -21,6 +21,9 @@ function handleReservationFormSubmission(roomId) {
         // Add more fields as needed
     };
 
+    // Collect reservation data from the form
+    const numberOfDays = document.getElementById('numberOfDays').value;
+
     // Create the guest first
     fetch('http://localhost:8080/guests', {
         method: 'POST',
@@ -32,12 +35,12 @@ function handleReservationFormSubmission(roomId) {
         .then(response => response.json())
         .then(createdGuest => {
             // Guest created, proceed to create reservation
-            createReservation(createdGuest.id, roomId);
+            createReservation(createdGuest.id, roomId, numberOfDays);
         })
         .catch(error => console.error(error));
 }
 
-function createReservation(guestId, roomId) {
+function createReservation(guestId, roomId, numberOfDays) {
     // Create the reservation
     fetch('http://localhost:8080/reservations', {
         method: 'POST',
@@ -47,7 +50,8 @@ function createReservation(guestId, roomId) {
         body: JSON.stringify({
             room: { id: roomId },
             guest: { id: guestId },
-            reservationDate: new Date().toISOString()
+            reservationDate: new Date().toISOString(),
+            numberOfDays: numberOfDays // Add the numberOfDays field
             // Add more reservation details as needed
         })
     })
