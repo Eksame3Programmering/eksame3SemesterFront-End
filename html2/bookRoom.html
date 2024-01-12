@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Room Reservation</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<h1>Room Reservation</h1>
+<form id="reservationForm">
+    <!-- Guest details input fields -->
+    <label for="guestUsername">Guest Username:</label>
+    <input id="guestUsername" name="guestUsername" required type="text"><br>
+
+    <label for="guestFirstName">First Name:</label>
+    <input id="guestFirstName" name="guestFirstName" required type="text"><br>
+
+    <label for="guestLastName">Last Name:</label>
+    <input id="guestLastName" name="guestLastName" required type="text"><br>
+
+    <label for="guestEmail">Email:</label>
+    <input id="guestEmail" name="guestEmail" required type="email"><br>
+
+    <label for="guestPhoneNumber">Phone Number:</label>
+    <input id="guestPhoneNumber" name="guestPhoneNumber" required type="tel"><br>
+
+    <input type="submit" value="Reserve Room">
+</form>
+
+<script src="../js/bookRoom.js"></script>
+</body>
+</html>

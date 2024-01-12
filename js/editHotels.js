@@ -1,7 +1,7 @@
 // Fetch hotels and update the table
 
 function openUpdatePage(hotelId) {
-    window.location.href = `updateHotel.html?id=${hotelId}`;
+    window.location.href = `../html2/updateHotel.html?id=${hotelId}`;
 }
 function fetchAndRenderHotels() {
     fetch('http://localhost:8080/hotels')

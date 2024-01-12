@@ -1,3 +1,4 @@
+var roomId = new URLSearchParams(window.location.search).get('roomId');
 // Function to fetch hotel details for editing
 function fetchHotelForUpdating() {
     // Get hotel ID from query parameter
@@ -47,7 +48,7 @@ function updateHotelDetails() {
         .then(updatedHotel => {
             console.log('Hotel updated successfully:', updatedHotel);
             // Redirect to the hotel list page after updating
-            window.location.href = 'hotelsList.html';
+            window.location.href = '../html/hotelsList.html';
         })
         .catch(error => {
             console.error('Error updating hotel:', error);
